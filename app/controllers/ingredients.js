@@ -13,5 +13,8 @@ export default Ember.Controller.extend({
     } else {
       return collection;
     }
-  })
+  }),
+  resetQuery(){
+    this.set('q', null);
+  }
 });
