@@ -1,0 +1,18 @@
+<div class="row">
+  <h3>Cocktail list</h3>
+  <label for="search">Search</label>
+  {{input value=q id="search"}}
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    {{#each filteredResults as |cocktail|}}
+      <div class="cocktail-{{cocktail.id}}">
+        {{link-to cocktail.name "cocktails.cocktail" cocktail}}
+      </div>
+    {{/each}}
+  </div>
+  <div class="col-xs-9">
+    {{outlet}}
+  </div>
+
+</div>

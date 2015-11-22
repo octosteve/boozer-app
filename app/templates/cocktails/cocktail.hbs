@@ -1,0 +1,13 @@
+<h2>{{model.name}}</h2>
+<blockquote class='blockquote-reverse'>
+  <p>{{model.description}}</p>
+   <footer>{{model.source}}</footer>
+</blockquote>
+<ul>
+{{#each model.proportions as |proportion|}}
+  <li><strong>{{proportion.amount}}</strong> {{proportion.ingredient}}</li>
+{{/each}}
+</ul>
+<p>
+  {{model.instructions}}
+</p>

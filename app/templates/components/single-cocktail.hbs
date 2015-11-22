@@ -1,0 +1,13 @@
+<h2>{{cocktail.name}}</h2>
+<blockquote class='blockquote-reverse'>
+  <p>{{cocktail.description}}</p>
+   <footer>{{cocktail.source}}</footer>
+</blockquote>
+<ul>
+{{#each cocktail.proportions as |proportion|}}
+  <li><strong>{{proportion.amount}}</strong> {{proportion.ingredient}}</li>
+{{/each}}
+</ul>
+<p>
+  {{cocktail.instructions}}
+</p>
