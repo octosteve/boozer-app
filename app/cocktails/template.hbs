@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-3">
+    <ul>
+      {{#each model as |cocktail|}}
+        <li>{{link-to cocktail.name "cocktails.cocktail" cocktail }}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-xs-9">
+    {{outlet}}
+  </div>
+</div>
