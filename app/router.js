@@ -12,6 +12,12 @@ Router.map(function() {
     });
     this.route('new');
   });
+  this.route('loading');
+  this.route('ingredients', function() {
+    this.route('ingredient', {
+      path: ':ingredient_id'
+    });
+  });
 });
 
 export default Router;

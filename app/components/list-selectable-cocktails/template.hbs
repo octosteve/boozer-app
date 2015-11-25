@@ -1,0 +1,10 @@
+<div class="col-xs-6">
+  {{list-cocktails cocktails=cocktails selectCocktail=(action "setCocktail")}}
+</div>
+<div class="col-xs-6">
+{{#if selectedCocktail}}
+  {{#show-cocktail cocktail=selectedCocktail}}
+    If you want to see more drinks like this, visit {{link-to "Cocktails" "cocktails"}}
+  {{/show-cocktail}}
+{{/if}}
+</div>
